@@ -1,0 +1,66 @@
+2015/01/20 22:54 - Started project, created git repo, connected to private GitHub repo, created some files, and pushed. Yay. Things done, progress got.
+2015/01/21 21:49 - created Makefile, got both main.c to compile with generator.c AT THE SAME TIME. Nice!
+2015/01/21 22:09 - created a border around the edge of the map, immutable
+2015/01/21 23:09 - created a command-line switch [-s seed] for adding a seed value to the random level generator. Also, a [--help] switch is made available.
+2015/01/22 10:44 - added a function to generate a room. returns 0 on success, 1 on failure.
+2015/01/22 22:15 - Now generates 12 non-overlapping rooms.
+2015/01/25 16:28 - Made the map an enumerator, no longer a int value. Easier to deal with later.
+2015/01/25 17:06 - Made the map an int again, because rock hardness.
+2015/01/25 22:44 - Can now find the closest room from a certain room.
+2015/01/25 23:23 - Connecting rooms works! Still errors with finding the closest unconnected.
+2015/01/26 01:25 - All rooms now connect! Passageways are very straight, but that is fine for now.
+2015/01/27 10:44 - Passageways became twisting and turning.
+2015/01/27 12:37 - Removed printf's from generator.c. They are not needed.
+
+-----Project 1.02-----
+
+2015/02/01 13:51 - Changed the entire project to use dungeon.h more. Added struct for the entire dungeon, which includes the rooms, which will be needed for this project.
+2015/02/01 14:36 - Added command line arugments for save and load. They don't do anything yet.
+2015/02/03 03:25 - Can open files for saving and loading. Finished converting everything to enums and structs.
+2015/02/03 05:20 - Can now successfully write to a file, hopefully. I shoulda done load first, so I could test.
+2015/02/03 06:15 - Can now successfully load from written save file, but only the ones that I write. I need to perfect the load function before I do anything else.
+2015/02/03 07:32 - I fixed the saving and loading issues. The program now works exactly as it should.
+
+-----Project 1.03-----
+
+2015/02/15 03:37 - Added a generic bheap.c file, with header that I will be using for the pathfinding. It mostly works, so I will move on.
+2015/02/15 15:26 - Dungeon Generates a Player and a Monster, currently indescernable
+2015/02/16 02:48 - Wrote pathfinding.c, have not tested, but compiles. Doesn't print path like it should.
+2015/02/17 04:33 - Fixed percolate_down in bheap.c. Updated bheap_init to not take a function pointer. Users assign that themselves.
+2015/02/17 05:16 - I feel stupid. I spent the last 3 days trying to find out why I couldn't find the player, only to realize I WASN'T CHECKING TO SEE IF ANYTHING WAS THE PLAYER. So yea. It's done now.
+
+-----Project 1.04-----
+
+2015/02/19 14:55 - Added the command-line switch for the number of monsters, doesn't do anything yet
+2015/02/20 01:08 - Pathfinding with multiple monsters works. Player gets killed correctly. Still have to have monsters kill monsters.
+2015/02/20 01:31 - Implemented the initiative stuff, so monsters move according to their speed now.
+2015/02/24 02:15 - Pathfinding works again. Now includes win detection, not just loss detection. Dead monsters can no longer move.
+2015/12/24 21:26 - Pathfinding works, but now only the smart monsters move.
+2015/12/24 21:53 - EVERYTHING WORKS! As far as I know anyway. Dumb monsters *should* only move when they see the player. And the algorithm that I used for sight probably isn't the best, but it works
+
+-----Project 1.05-----
+
+2015/03/03 22:03 - Finished player controls
+2015/03/03 22:29 - Quit
+2015/03/03 23:51 - Look mode works for the most part
+
+-----Project 1.06-----
+
+2015/03/24 11:20 - Saving function now compiles
+2015/03/24 11:49 - Loading function now compiles
+2015/03/24 12:59 - Fixed crash on using uninitialized value, now I need to fix the calculatefilesize function.
+2015/03/24 21:23 - calculatefilesize function is done, but uninitialized value problem is back.
+
+-----Project 1.07-----
+
+2015/03/29 00:49 - Moved old project to a new folder for conversion to C++. Did this entire project in its own folder.
+
+
+
+
+
+
+
+
+
+
